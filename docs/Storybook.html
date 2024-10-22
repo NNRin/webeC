@@ -81,11 +81,23 @@
                 font-size: 1rem; /* Increase font size */
             }
             td, th {
-                padding: 0.5rem; /* Reduce padding */
+                padding: 0.3rem 0.5rem 0.3rem 0.5rem; /* Reduce padding */
+                font-size: 1.15em;
+                letter-spacing: 0.03em;
             }
             body {
                 padding: 3px;
                 font-size: 1.5rem
+            }
+            /* Styles to collapse the "Weekday" column */
+            th:first-child{
+                font-size: 0.5rem;
+            }
+
+            td:first-child {
+                width: 0.4em;  /* Make the column very narrow */
+                text-align: center; /* Center the weekday abbreviation */
+                font-size: 0.8rem;
             }
         }
 
@@ -107,95 +119,97 @@
                 <h1>Delivery dates and examination details</h1>
             <article>
                 <h2>Overview</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Weekday</th>
-                            <th>Date</th>
-                            <th>Topic</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weekday</th>
+                                <th>Date</th>
+                                <th>Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mi</td>
+                                <td>18.09.2024</td>
+                                <td>HTML</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>25.09.2024</td>
+                                <td>CSS</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>02.10.2024</td>
+                                <td>Grails, Web, MVC, Test</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>09.10.2024</td>
+                                <td>GSP, Template, Taglib, Layout</td>
+                            </tr>
+                            <tr>
                             <td>Mi</td>
-                            <td>18.09.2024</td>
-                            <td>HTML</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>25.09.2024</td>
-                            <td>CSS</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>02.10.2024</td>
-                            <td>Grails, Web, MVC, Test</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>09.10.2024</td>
-                            <td>GSP, Template, Taglib, Layout</td>
-                        </tr>
-                        <tr>
-                        <td>Mi</td>
-                            <td>16.10.2024</td>
-                            <td>Persistence, DB-Access</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>23.10.2024</td>
-                            <td>Simple Security</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>30.10.2024</td>
-                            <td>REST, Services</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Mi</td>
-                            <td>06.11.2024</td>
-                            <td>ANWESENHEITSPFLICHT! Übungsvorbereitung</td>
-                        </tr><tr>
-                            <td>Mi</td>
-                            <td>13.11.2024</td>
-                            <td>Javascript</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>20.11.2024</td>
-                            <td>Responsive / Mobile Web</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Mi</td>
-                            <td>04.12.2024</td>
-                            <td>Übungsanlass</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Mi</td>
-                            <td>11.12.2024</td>
-                            <td>Übungsanlass</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Mi</td>
-                            <td>18.12.2024</td>
-                            <td>WICHTIG! Übungsabgabe</td>
-                        </tr><tr>
-                            <td>Mi</td>
-                            <td>08.01.2025</td>
-                            <td>Deployment</td>
-                        </tr>
-                        <tr>
-                            <td>Mi</td>
-                            <td>15.01.2025</td>
-                            <td>Prüfungsvorbereitung</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="3"> MSP date to be announced</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                                <td>16.10.2024</td>
+                                <td>Persistence, DB-Access</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>23.10.2024</td>
+                                <td>Simple Security</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>30.10.2024</td>
+                                <td>REST, Services</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>Mi</td>
+                                <td>06.11.2024</td>
+                                <td>ANWESENHEITSPFLICHT! Übungsvorbereitung</td>
+                            </tr><tr>
+                                <td>Mi</td>
+                                <td>13.11.2024</td>
+                                <td>Javascript</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>20.11.2024</td>
+                                <td>Responsive / Mobile Web</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>Mi</td>
+                                <td>04.12.2024</td>
+                                <td>Übungsanlass</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>Mi</td>
+                                <td>11.12.2024</td>
+                                <td>Übungsanlass</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>Mi</td>
+                                <td>18.12.2024</td>
+                                <td>WICHTIG! Übungsabgabe</td>
+                            </tr><tr>
+                                <td>Mi</td>
+                                <td>08.01.2025</td>
+                                <td>Deployment</td>
+                            </tr>
+                            <tr>
+                                <td>Mi</td>
+                                <td>15.01.2025</td>
+                                <td>Prüfungsvorbereitung</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"> MSP date to be announced</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </article>
             <article>
                 <h2> Total Effort</h2>
