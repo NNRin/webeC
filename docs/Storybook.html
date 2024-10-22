@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Storybook for the Web Engineering Module</title>
 	<style>
@@ -69,6 +70,15 @@
 
         .highlight {
             font-weight: bold;
+        }
+
+        @media (max-width: 700px) { /* Adjust to your preferred breakpoint */
+            table {
+                font-size: 1rem; /* Increase font size */
+            }
+            td, th {
+                padding: 0.5rem; /* Reduce padding */
+            }
         }
 
 	</style>
